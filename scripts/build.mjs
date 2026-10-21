@@ -2,13 +2,17 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { brotliCompressSync, constants } from 'node:zlib';
+import { minify } from 'terser';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const source = readFileSync(resolve(root, 'src/bookmarklet.js'), 'utf8').replace(/\r\n/g, '\n');
-const bytes = brotliCompressSync(Buffer.from(source), { params: {
-  [constants.BROTLI_PARAM_MODE]: constants.BROTLI_MODE_FONT,
+const { code } = await minify(source, { format: { comments: false } });
+const bytes = brotliCompressSync(Buffer.from(code), { params: {
+  [constants.BROTLI_PARAM_MODE]: constants.BROTLI_MODE_GENERIC,
   [constants.BROTLI_PARAM_LGWIN]: 16,
   [constants.BROTLI_PARAM_DISABLE_LITERAL_CONTEXT_MODELING]: 1,
+  [constants.BROTLI_PARAM_NPOSTFIX]: 1,
+  [constants.BROTLI_PARAM_NDIRECT]: 16,
 } });
 
 const alphabet = Array.from({ length: 94 }, (_, i) => String.fromCharCode(i + 33))

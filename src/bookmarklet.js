@@ -37,24 +37,7 @@
   host.style.cssText = 'all:initial;position:fixed;inset:0;z-index:2147483647;pointer-events:none;font:14px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#fff;color-scheme:dark';
   const root = host.attachShadow({ mode: 'open' });
   const style = node('style');
-  style.textContent = `
-    :host{font:14px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#fff;color-scheme:dark}
-    *{box-sizing:border-box}[hidden]{display:none!important}
-    button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;min-height:44px}
-    button:focus-visible{outline:2px solid #fff;outline-offset:2px}
-    #chip{pointer-events:auto;position:fixed;top:calc(max(10px,env(safe-area-inset-top)) + 64px);left:50%;transform:translateX(-50%);
-      padding:8px 13px;border:1px solid #555;border-radius:24px;background:rgba(22,22,24,.94);font-weight:600}
-    #menu{pointer-events:auto;position:fixed;top:calc(max(10px,env(safe-area-inset-top)) + 118px);
-      left:50%;transform:translateX(-50%);width:min(280px,calc(100vw - 24px));
-      max-height:65vh;max-height:min(65vh,calc(100dvh - max(10px,env(safe-area-inset-top)) - 132px - env(safe-area-inset-bottom)));overflow:auto;
-      padding:12px;background:#19191b;border:1px solid #444;border-radius:12px}
-    #heading{display:flex;align-items:center;justify-content:space-between;font-weight:600}
-    #hide{background:transparent;border:0;padding:4px 6px;color:#ccc;font-size:13px}
-    p{font-size:13px;color:#bcbcc2;margin:8px 0;overflow-wrap:anywhere}
-    #actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .action{border:0;border-radius:8px;background:#303034;padding:8px 11px}
-    #remove{background:transparent;color:#bcbcc2}
-  `;
+  style.textContent = `:host{font:14px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#fff;color-scheme:dark}*{box-sizing:border-box}[hidden]{display:none!important}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;min-height:44px}button:focus-visible{outline:2px solid #fff;outline-offset:2px}#chip{pointer-events:auto;position:fixed;top:calc(max(10px,env(safe-area-inset-top)) + 64px);left:50%;transform:translateX(-50%);padding:8px 13px;border:1px solid #555;border-radius:24px;background:rgba(22,22,24,.94);font-weight:600}#menu{pointer-events:auto;position:fixed;top:calc(max(10px,env(safe-area-inset-top)) + 118px);left:50%;transform:translateX(-50%);width:min(280px,calc(100vw - 24px));max-height:65vh;max-height:min(65vh,calc(100dvh - max(10px,env(safe-area-inset-top)) - 132px - env(safe-area-inset-bottom)));overflow:auto;padding:12px;background:#19191b;border:1px solid #444;border-radius:12px}#heading{display:flex;align-items:center;justify-content:space-between;font-weight:600}#hide{background:transparent;border:0;padding:4px 6px;color:#ccc;font-size:13px}p{font-size:13px;color:#bcbcc2;margin:8px 0;overflow-wrap:anywhere}#actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.action{border:0;border-radius:8px;background:#303034;padding:8px 11px}#remove{background:transparent;color:#bcbcc2}`;
 
   const chip = node('button', 'Waiting...');
   chip.id = 'chip';
