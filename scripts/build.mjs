@@ -13,7 +13,8 @@ const bytes = brotliCompressSync(Buffer.from(source), { params: {
 
 const alphabet = Array.from({ length: 94 }, (_, i) => String.fromCharCode(i + 33))
   .filter(c => !'"#%?\\'.includes(c)).join('');
-let value = BigInt('0x1' + bytes.toString('hex'));
+const sentinel = bytes[0] < 16;
+let value = BigInt('0x' + (sentinel ? '1' : '') + bytes.toString('hex'));
 let packed = '';
 while (value) {
   packed = alphabet[Number(value % 89n)] + packed;
@@ -22,7 +23,8 @@ while (value) {
 
 const script = 'new(Response)(new(Response)(Uint8Array.fromHex([..."' + packed +
   '"].reduce((n,c)=>n*89n+BigInt((c=c.charCodeAt())-33-2*(c>35)-(c>37)-(c>63)-(c>92)),0n)' +
-  ".toString(16).slice(1))).body.pipeThrough(new(DecompressionStream)('brotli'))).text().then(eval)";
+  '.toString(16)' + (sentinel ? '.slice(1)' : '') +
+  ")).body.pipeThrough(new(DecompressionStream)('brotli'))).text().then(eval)";
 const output = 'javascript:' + script.replace(/[%#?]|[^\x21-\x7e]/gu, encodeURIComponent);
 
 mkdirSync(resolve(root, 'dist'), { recursive: true });
