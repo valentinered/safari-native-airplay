@@ -263,6 +263,7 @@
     const v = node('video');
     video = v;
     v.style.cssText = 'display:block;width:100%;height:100%;object-fit:contain;background:#000';
+    v.crossOrigin = 'anonymous';
     v.controls = true;
     v.playsInline = true;
     v.disableRemotePlayback = false;
