@@ -8,6 +8,8 @@ A standalone Safari bookmarklet for websites where native AirPlay fails to cast 
 
 ## Install on iPhone or iPad
 
+Requires [Safari 18.4 or newer](https://webkit.org/blog/16574/webkit-features-in-safari-18-4/).
+
 1. Open Safari and bookmark any webpage.
 2. Open your bookmarks, edit that bookmark, and rename it **Native AirPlay** or anything.
 3. Open [`dist/bookmarklet.txt`](dist/bookmarklet.txt), copy the entire single line and paste it as the bookmark's URL.
