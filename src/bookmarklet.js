@@ -210,9 +210,14 @@
     overlay = null;
   }
 
+  function suppressSitePause(event) {
+    event.stopImmediatePropagation();
+  }
+
   function closeVideo() {
     if (!video) return;
     remember();
+    original?.removeEventListener('pause', suppressSitePause, true);
     discard();
     acceptAfter = performance.now();
     active = null;
@@ -253,6 +258,7 @@
       position = Number.isFinite(original?.currentTime) ? original.currentTime : 0;
     }
     discard();
+    original?.addEventListener('pause', suppressSitePause, true);
     original?.pause();
     active = source;
     message = '';
