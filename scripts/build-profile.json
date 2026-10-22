@@ -24,7 +24,7 @@
     {
       "index": 12,
       "from": "x",
-      "name": "D"
+      "name": "T"
     },
     {
       "index": 13,
@@ -47,6 +47,11 @@
       "name": "X"
     },
     {
+      "index": 18,
+      "from": "N",
+      "name": "$"
+    },
+    {
       "index": 21,
       "from": "j",
       "name": "E"
@@ -65,6 +70,16 @@
       "index": 31,
       "from": "H",
       "name": "s"
+    },
+    {
+      "index": 32,
+      "from": "V",
+      "name": "N"
+    },
+    {
+      "index": 36,
+      "from": "W",
+      "name": "q"
     },
     {
       "index": 37,
@@ -104,7 +119,7 @@
     {
       "index": 46,
       "from": "h",
-      "name": "q"
+      "name": "W"
     },
     {
       "index": 47,
