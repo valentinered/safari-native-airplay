@@ -107,8 +107,8 @@
       if (!raw || !/\.m3u8(?:[?#]|$)/i.test(raw)) return;
       const url = new URL(raw, document.baseURI);
       if (!/^https?:$/.test(url.protocol)) return;
-      if (candidate && time < candidate.time) return;
-      candidate = { url: url.href, time };
+      if (candidate && time < candidate[1]) return;
+      candidate = [url.href, time];
       sitePage = location.href;
       message = '';
       render();
@@ -290,7 +290,7 @@
       show();
     });
     show(false);
-    v.src = source.url;
+    v.src = source[0];
     v.load();
     play(v);
   }

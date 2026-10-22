@@ -26,13 +26,14 @@ const hex = bytes.toString('hex');
 let value = BigInt('0x' + hex);
 const zeros = '0'.repeat(hex.length - value.toString(16).length);
 let packed = '';
-while (value) {
-  packed = alphabet[Number(value % 88n)] + packed;
-  value /= 88n;
+while (value >= 39n) {
+  const digit = (value - 39n) % 88n;
+  packed = alphabet[Number(digit)] + packed;
+  value = (value - 39n - digit) / 88n;
 }
 
 const script = 'new(Response)(new(Response)(Uint8Array.fromHex(' + (zeros ? '"' + zeros + '"+' : '') + '[..."' + packed +
-  '"].reduce((n,c)=>n*88n+BigInt(c.charCodeAt()-39+(c<\'&\')+(c<\'@\')+(c<\']\')),0n)' +
+  '"].reduce((n,c)=>n*88n+BigInt(c.charCodeAt()+(c<\'&\')+(c<\'@\')+(c<\']\')),' + value + 'n)' +
   '.toString(16)' +
   ")).body.pipeThrough(new(DecompressionStream)('brotli'))).text().then(eval)";
 const output = 'javascript:' + script.replace(/[%#?]|[^\x21-\x7e]/gu, encodeURIComponent);

@@ -22,9 +22,14 @@
   "alphabet": "etnrqiacPludfpmhvgbywkxoQIETNROjACSLUDFsMHVGBYWKXzZJ$_",
   "assignments": [
     {
+      "index": 12,
+      "from": "x",
+      "name": "D"
+    },
+    {
       "index": 13,
       "from": "o",
-      "name": "m"
+      "name": "z"
     },
     {
       "index": 14,
@@ -32,19 +37,19 @@
       "name": "t"
     },
     {
+      "index": 16,
+      "from": "E",
+      "name": "j"
+    },
+    {
       "index": 17,
       "from": "T",
-      "name": "u"
+      "name": "X"
     },
     {
-      "index": 25,
-      "from": "L",
-      "name": "U"
-    },
-    {
-      "index": 26,
-      "from": "U",
-      "name": "L"
+      "index": 21,
+      "from": "j",
+      "name": "E"
     },
     {
       "index": 27,
@@ -52,34 +57,54 @@
       "name": "P"
     },
     {
-      "index": 32,
-      "from": "V",
-      "name": "h"
+      "index": 29,
+      "from": "s",
+      "name": "H"
+    },
+    {
+      "index": 31,
+      "from": "H",
+      "name": "s"
     },
     {
       "index": 37,
       "from": "K",
-      "name": "D"
+      "name": "J"
+    },
+    {
+      "index": 38,
+      "from": "X",
+      "name": "h"
+    },
+    {
+      "index": 39,
+      "from": "z",
+      "name": "o"
     },
     {
       "index": 40,
       "from": "t",
-      "name": "T"
+      "name": "Q"
+    },
+    {
+      "index": 43,
+      "from": "q",
+      "name": "f"
     },
     {
       "index": 44,
       "from": "p",
-      "name": "v"
+      "name": "K"
     },
     {
       "index": 45,
       "from": "m",
-      "name": "o"
+      "name": "i"
     },
     {
       "index": 46,
       "from": "h",
-      "name": "V"
+      "name": "q"
     },
     {
       "index": 47,
@@ -87,14 +112,24 @@
       "name": "p"
     },
     {
-      "index": 53,
-      "from": "P",
-      "name": "K"
+      "index": 50,
+      "from": "i",
+      "name": "m"
     },
     {
-      "index": 55,
-      "from": "u",
-      "name": "J"
+      "index": 53,
+      "from": "P",
+      "name": "x"
+    },
+    {
+      "index": 57,
+      "from": "f",
+      "name": "v"
+    },
+    {
+      "index": 87,
+      "from": "e",
+      "name": "t"
     }
   ],
   "brotli": {
