@@ -1,0 +1,12 @@
+{
+  "name": "safari-native-airplay",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "acorn": "8.19.0",
+    "eslint-scope": "9.1.2",
+    "terser": "5.51.2"
+  }
+}
