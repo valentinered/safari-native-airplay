@@ -1,0 +1,108 @@
+{
+  "functionOrder": [
+    "siteVideo",
+    "button",
+    "openVideo",
+    "render",
+    "remember",
+    "wrappedFetch",
+    "wrappedOpen",
+    "node",
+    "directSource",
+    "play",
+    "seek",
+    "record",
+    "keydown",
+    "closeVideo",
+    "suppressSitePause",
+    "discard",
+    "outside",
+    "show"
+  ],
+  "alphabet": "etnrqiacPludfpmhvgbywkxoQIETNROjACSLUDFsMHVGBYWKXzZJ$_",
+  "assignments": [
+    {
+      "index": 13,
+      "from": "o",
+      "name": "m"
+    },
+    {
+      "index": 14,
+      "from": "Q",
+      "name": "t"
+    },
+    {
+      "index": 17,
+      "from": "T",
+      "name": "u"
+    },
+    {
+      "index": 25,
+      "from": "L",
+      "name": "U"
+    },
+    {
+      "index": 26,
+      "from": "U",
+      "name": "L"
+    },
+    {
+      "index": 27,
+      "from": "D",
+      "name": "P"
+    },
+    {
+      "index": 32,
+      "from": "V",
+      "name": "h"
+    },
+    {
+      "index": 37,
+      "from": "K",
+      "name": "D"
+    },
+    {
+      "index": 40,
+      "from": "t",
+      "name": "T"
+    },
+    {
+      "index": 44,
+      "from": "p",
+      "name": "v"
+    },
+    {
+      "index": 45,
+      "from": "m",
+      "name": "o"
+    },
+    {
+      "index": 46,
+      "from": "h",
+      "name": "V"
+    },
+    {
+      "index": 47,
+      "from": "v",
+      "name": "p"
+    },
+    {
+      "index": 53,
+      "from": "P",
+      "name": "K"
+    },
+    {
+      "index": 55,
+      "from": "u",
+      "name": "J"
+    }
+  ],
+  "brotli": {
+    "quality": 11,
+    "mode": 0,
+    "lgwin": 16,
+    "disableLiteral": 0,
+    "npostfix": 0,
+    "ndirect": 0
+  }
+}
